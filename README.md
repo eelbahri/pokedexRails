@@ -1,7 +1,5 @@
 # Cours Rails
 
-# Cours
-
 ###### Remember
 
  - rails s
