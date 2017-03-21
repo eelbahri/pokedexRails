@@ -5,6 +5,7 @@
 ### 21/03/17
 > Ajout de bootstrap-sass
 > Ajout de meta dans les vues
+> CRUD
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
