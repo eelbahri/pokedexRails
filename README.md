@@ -6,8 +6,12 @@
 
  - rails s
 
-### 21/03/17
+### 21 mars 2017
 
 > Ajout de bootstrap-sass
+
 > Ajout de meta dans les vues
-> CRUD
+
+> CRUD complet
+
+> link_to
