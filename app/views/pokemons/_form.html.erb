@@ -1,0 +1,14 @@
+<%= form_for @pokemon do |f| %>
+<div class="row">
+    <div class="form-group col-lg-5">
+        <p>
+            <%= f.label :name, 'Nom' %><br>
+            <%= f.text_field :name, class:'form-control' %>
+        </p>
+    </div>
+</div>
+
+<p>
+    <%= f.submit 'Enregistrer', class: 'btn btn-primary' %>
+</p>
+<% end %>

@@ -1,15 +1,5 @@
 <h1>Ajout d'un pokemon</h1>
-    <%= form_for @pokemon do |f| %>
-    <div class="row">
-        <div class="form-group col-lg-5">
-            <p>
-                <%= f.label :name, 'Nom' %><br>
-                <%= f.text_field :name, class:'form-control' %>
-            </p>
-        </div>
-    </div>
 
-    <p>
-        <%= f.submit 'Ajouter', class: 'btn btn-primary' %>
-    </p>
-<% end %>
+<%= render partial: 'form' %>
+
+<%= link_to 'Liste des Pokemons', pokemons_path, class: 'btn btn-default' %>

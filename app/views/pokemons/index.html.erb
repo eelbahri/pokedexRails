@@ -14,10 +14,24 @@
         <tr>
             <td><%= pokemon.id %></td>
             <td><%= pokemon.name %></td>
+            <td><%= link_to 'Afficher', pokemon_path(pokemon.id), class: 'btn btn-info' %></td>
+            <td><%= link_to 'Modifier', edit_pokemon_path(pokemon), class: 'btn btn-warning' %></td>
+            <td>
+                <%= link_to 'Supprimer', pokemon,
+                method: :delete,
+                data: {
+                    confirm: 'Êtes vous sûr(e) de vouloir supprimer ce Pokemon ?'
+                },
+                class: 'btn btn-danger' %>
+            </td>
         </tr>
         <% end %>
     </tbody>
 </table>
 <% else %>
-<p>non</p>
+<p>Y a R xptdr ^^'</p>
 <% end %>
+
+<p>
+    <%= link_to 'Ajouter un Pokemon', new_pokemon_path, class: 'btn btn-success'%>
+</p>
