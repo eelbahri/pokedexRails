@@ -18,4 +18,9 @@
  $ bundle exec rails generate migration AddAttributesToPokemons
  $ bundle exec rails db:migrate
  ```
-  - Modification des formulaires en conséquences 
+  - Modification des formulaires en conséquences
+  - Association Pokemon - Type
+  ```sh
+  $ rails generate scaffold Type name:string color:string --skip --skip-test-framework --skip-assets
+  $ bundle exec rails db:migrate
+  ```
