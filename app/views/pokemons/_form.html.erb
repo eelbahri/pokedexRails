@@ -4,11 +4,20 @@
         <p>
             <%= f.label :name, 'Nom' %><br>
             <%= f.text_field :name, class:'form-control' %>
+
+            <%= f.label :number, 'Number' %><br>
+            <%= f.text_field :number, class:'form-control' %>
+
+            <%= f.label :level, 'Level' %><br>
+            <%= f.text_field :level, class:'form-control' %>
+
+            <%= f.label :health_points, 'Health points' %><br>
+            <%= f.text_field :health_points, class:'form-control' %>
         </p>
     </div>
 </div>
 
 <p>
-    <%= f.submit 'Enregistrer', class: 'btn btn-primary' %>
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
 </p>
 <% end %>

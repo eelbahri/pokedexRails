@@ -1,4 +1,4 @@
-<h1>Liste des pokemons</h1>
+<h1>Pokemons list</h1>
 
 
 <% if @pokemons.any? %>
@@ -6,7 +6,10 @@
     <thead>
         <tr>
             <td>Id</td>
-            <td>Nom</td>
+            <td>Name</td>
+            <td>Number</td>
+            <td>Level</td>
+            <td>Health Points</td>
         </tr>
     </thead>
     <tbody>
@@ -14,10 +17,12 @@
         <tr>
             <td><%= pokemon.id %></td>
             <td><%= pokemon.name %></td>
-            <td><%= link_to 'Afficher', pokemon_path(pokemon.id), class: 'btn btn-info' %></td>
-            <td><%= link_to 'Modifier', edit_pokemon_path(pokemon), class: 'btn btn-warning' %></td>
-            <td>
-                <%= link_to 'Supprimer', pokemon,
+            <td><%= pokemon.number %></td>
+            <td><%= pokemon.level %></td>
+            <td><%= pokemon.health_points %> hp</td>
+            <td><%= link_to 'Show', pokemon_path(pokemon.id), class: 'btn btn-info' %>
+                <%= link_to 'Edit', edit_pokemon_path(pokemon), class: 'btn btn-warning' %>
+                <%= link_to 'Delete', pokemon,
                 method: :delete,
                 data: {
                     confirm: 'Êtes vous sûr(e) de vouloir supprimer ce Pokemon ?'

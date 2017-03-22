@@ -1,6 +1,9 @@
-<h1>Afficher un pokemon</h1>
+<h1>Pokemon</h1>
 
-<p>Nom : <%= @pokemon.name %></p>
+<p>Name : <%= @pokemon.name %></p>
+<p>Number : <%= @pokemon.number %></p>
+<p>Level : <%= @pokemon.level %></p>
+<p>Health points : <%= @pokemon.health_points %> hp</p>
 
 <p>
     <%= link_to 'Liste des Pokemons', pokemons_path, class: 'btn btn-default' %>

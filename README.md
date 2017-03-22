@@ -14,7 +14,8 @@
 ### 22 mars 2017
 
  - Migration sur un modèle existant
- ‘‘‘sh
-$ bundle exec rails generate migration AddAttributesToPokemons
-$ bundle exec rails db:migrate
- ’’’
+ ```sh
+ $ bundle exec rails generate migration AddAttributesToPokemons
+ $ bundle exec rails db:migrate
+ ```
+  - Modification des formulaires en conséquences 
