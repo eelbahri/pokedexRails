@@ -55,3 +55,4 @@
  ```
 
  - Ajout des types dans le formulaire de pokemons (récuèpere directement les types existant et en fait une liste déroulante)
+ - Création d'un helper pour les badges des types de pokemons

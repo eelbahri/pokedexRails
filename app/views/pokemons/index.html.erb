@@ -21,16 +21,7 @@
             <td><%= pokemon.number %></td>
             <td><%= pokemon.level %></td>
             <td><%= pokemon.health_points %> hp</td>
-            <td>
-                <% type = pokemon.type %>
-                <% if type.nil? %>
-                aucun
-                <% else %>
-                    <span style="background-color: <%= type.color %>" class="badge">
-                        <%= type.name %>
-                    </span>
-                <% end %>
-            </td>
+            <td><%= pokemon.type ? type_badge(pokemon.type.name, pokemon.type.color) : '&empty;'.html_safe %></td>
             <td><%= link_to 'Show', pokemon_path(pokemon.id), class: 'btn btn-info' %>
                 <%= link_to 'Edit', edit_pokemon_path(pokemon), class: 'btn btn-warning' %>
                 <%= link_to 'Delete', pokemon,

@@ -7,7 +7,7 @@
 
 <p>
   <strong>Color:</strong>
-  <%= @type.color %>
+  <%= type_badge(@type.color, @type.color) %>
 </p>
 
 <%= link_to 'Edit', edit_type_path(@type), class: 'btn btn-warning' %> |

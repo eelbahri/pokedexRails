@@ -11,9 +11,7 @@
     <% if type.nil? %>
     aucun
     <% else %>
-        <span style="background-color: <%= type.color %>" class="badge">
-            <%= type.name %>
-        </span>
+        <%= type_badge(type.name, type.color) %>
     <% end %>
 </p>
 
