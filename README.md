@@ -32,3 +32,24 @@
  $ bundle exec rails g migration AddTypeToPokemon type:belongs_to
  $ bundle exec rails db:migrate
 ```
+ - Modification en conséquences des models
+
+ - Utilisation de la console en mode bac à sable -> Permet d'exécuter qui seront supprimés à la fin de la session
+ ```sh
+ $ bundle exec rails console --sandbox
+ ```
+
+ - Création d'un pokemon et d'un type en une seule ligne de commande :
+ ```sh
+ > Pokemon.create(name: 'Toto', type: Type.create(name: 'Tutu'))
+ ```
+ - Pour vérifier :
+ ```sh
+ > Pokemon.last.type.name
+ ```
+
+ - Ajout de ```sh gem 'simple_form' ``` au Gemfile (redémarrer le serveur)
+ ```sh
+ $ bundle install
+ $ bundle exec rails generate simple_form:install --bootstrap
+ ```
