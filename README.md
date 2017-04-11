@@ -24,3 +24,11 @@
   $ rails generate scaffold Type name:string color:string --skip --skip-test-framework --skip-assets
   $ bundle exec rails db:migrate
   ```
+### 11 avril 2017
+
+ - Mise en place du style pour toutes les vues "types"
+ - Lien entre les pokemons et les types avec association belongs_to
+ ```sh
+ $ bundle exec rails g migration AddTypeToPokemon type:belongs_to
+ $ bundle exec rails db:migrate
+```

@@ -1,8 +1,7 @@
 class PokemonsController < ApplicationController
     before_action :set_pokemon, only: [:show, :edit, :update, :destroy] # boje
 
-    def index
-        # Le @ envoie la variable à la vue
+    def index # Le @ envoie la variable à la vue
         @pokemons = Pokemon.all
     end
 
