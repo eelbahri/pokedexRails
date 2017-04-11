@@ -56,3 +56,6 @@
 
  - Ajout des types dans le formulaire de pokemons (récuèpere directement les types existant et en fait une liste déroulante)
  - Création d'un helper pour les badges des types de pokemons
+ - Performance : Amélioration de la requête sur l'index pokemon
+ - Pagination : Ajout de 2 gem (will_paginate & will_paginate-bootstrap), modification de l'index dans le controller et la vue
+ - Traduction de la librairie de pagination (config/initializers/locale.rb  + config/initializers/locales/fr)

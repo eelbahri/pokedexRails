@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'

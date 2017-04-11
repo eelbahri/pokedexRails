@@ -1,42 +1,44 @@
 <h1>Pokemons list</h1>
 
-
 <% if @pokemons.any? %>
-<table class="table">
-    <thead>
-        <tr>
-            <td>Id</td>
-            <td>Name</td>
-            <td>Number</td>
-            <td>Level</td>
-            <td>Health Points</td>
-            <td>Type</td>
-        </tr>
-    </thead>
-    <tbody>
-        <% @pokemons.each do |pokemon| %>
-        <tr>
-            <td><%= pokemon.id %></td>
-            <td><%= pokemon.name %></td>
-            <td><%= pokemon.number %></td>
-            <td><%= pokemon.level %></td>
-            <td><%= pokemon.health_points %> hp</td>
-            <td><%= pokemon.type ? type_badge(pokemon.type.name, pokemon.type.color) : '&empty;'.html_safe %></td>
-            <td><%= link_to 'Show', pokemon_path(pokemon.id), class: 'btn btn-info' %>
-                <%= link_to 'Edit', edit_pokemon_path(pokemon), class: 'btn btn-warning' %>
-                <%= link_to 'Delete', pokemon,
-                method: :delete,
-                data: {
-                    confirm: 'Êtes vous sûr(e) de vouloir supprimer ce Pokemon ?'
-                },
-                class: 'btn btn-danger' %>
-            </td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
+
+    <%= will_paginate @pokemons, renderer: BootstrapPagination::Rails %>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Number</td>
+                <td>Level</td>
+                <td>Health Points</td>
+                <td>Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% @pokemons.each do |pokemon| %>
+            <tr>
+                <td><%= pokemon.id %></td>
+                <td><%= pokemon.name %></td>
+                <td><%= pokemon.number %></td>
+                <td><%= pokemon.level %></td>
+                <td><%= pokemon.health_points %> hp</td>
+                <td><%= pokemon.type ? type_badge(pokemon.type.name, pokemon.type.color) : '&empty;'.html_safe %></td>
+                <td><%= link_to 'Show', pokemon_path(pokemon.id), class: 'btn btn-info' %>
+                    <%= link_to 'Edit', edit_pokemon_path(pokemon), class: 'btn btn-warning' %>
+                    <%= link_to 'Delete', pokemon,
+                    method: :delete,
+                    data: {
+                        confirm: 'Êtes vous sûr(e) de vouloir supprimer ce Pokemon ?'
+                    },
+                    class: 'btn btn-danger' %>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
 <% else %>
-<p>Y a R xptdr ^^'</p>
+    <p>Y a R xptdr ^^'</p>
 <% end %>
 
 <p>

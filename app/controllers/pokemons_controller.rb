@@ -2,7 +2,8 @@ class PokemonsController < ApplicationController
     before_action :set_pokemon, only: [:show, :edit, :update, :destroy] # boje
 
     def index # Le @ envoie la variable à la vue
-        @pokemons = Pokemon.all
+        # pour plus de performances
+        @pokemons = Pokemon.paginate(page: params[:page], per_page: 5).includes(:type)
     end
 
     def show
