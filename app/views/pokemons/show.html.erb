@@ -6,6 +6,18 @@
 <p>Health points : <%= @pokemon.health_points %> hp</p>
 
 <p>
+    Type:
+    <% type = @pokemon.type %>
+    <% if type.nil? %>
+    aucun
+    <% else %>
+        <span style="background-color: <%= type.color %>" class="badge">
+            <%= type.name %>
+        </span>
+    <% end %>
+</p>
+
+<p>
     <%= link_to 'Liste des Pokemons', pokemons_path, class: 'btn btn-default' %>
     <%= link_to 'Modifier', edit_pokemon_path, class: 'btn btn-default' %>
 </p>
