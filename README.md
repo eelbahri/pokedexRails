@@ -53,3 +53,5 @@
  $ bundle install
  $ bundle exec rails generate simple_form:install --bootstrap
  ```
+
+ - Ajout des types dans le formulaire de pokemons (récuèpere directement les types existant et en fait une liste déroulante)

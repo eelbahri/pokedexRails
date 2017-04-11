@@ -1,29 +1,44 @@
 <%= simple_form_for @pokemon do |f| %>
-<div class="row">
-    <div class="form-group col-lg-5">
-        <p>
-            <%= f.input :name, label: 'Name', class:'form-control' %>
-        </p>
+    <div class="row">
+        <div class="form-group col-lg-5">
+            <p>
+                <%= f.input :name, label: 'Name', class:'form-control' %>
+            </p>
+        </div>
     </div>
 
-    <div class="form-group col-lg-5">
-        <p>
-            <%= f.input :number, label: 'Number', class:'form-control' %>
-        </p>
+    <div class="row">
+        <div class="form-group col-lg-5">
+            <p>
+                <%= f.input :number, label: 'Number', class:'form-control' %>
+            </p>
+        </div>
     </div>
 
-    <div class="form-group col-lg-5">
-        <p>
-            <%= f.input :level, label: 'Level', class:'form-control' %>
-        </p>
+    <div class="row">
+        <div class="form-group col-lg-5">
+            <p>
+                <%= f.input :level, label: 'Level', class:'form-control' %>
+            </p>
+        </div>
     </div>
 
-    <div class="form-group col-lg-5">
-        <p>
-            <%= f.input :health_points, label: 'Health points', class:'form-control' %>
-        </p>
+    <div class="row">
+        <div class="form-group col-lg-5">
+            <p>
+                <%= f.input :health_points, label: 'Health points', class:'form-control' %>
+            </p>
+        </div>
     </div>
-</div>
+
+    <div class="row">
+        <div class="form-group col-lg-5">
+            <p>
+                <%= f.association :type, label: 'Type', class: 'form-control' %>
+            </p>
+        </div>
+    </div>
+
 
 <p>
     <%= f.submit 'Submit', class: 'btn btn-primary' %>
