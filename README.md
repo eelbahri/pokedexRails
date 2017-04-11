@@ -48,7 +48,7 @@
  > Pokemon.last.type.name
  ```
 
- - Ajout de ```sh gem 'simple_form' ``` au Gemfile (redémarrer le serveur)
+ - Ajout de ```sle_form' ``` au Gemfile (redémarrer le serveur)
  ```sh
  $ bundle install
  $ bundle exec rails generate simple_form:install --bootstrap
@@ -59,3 +59,9 @@
  - Performance : Amélioration de la requête sur l'index pokemon
  - Pagination : Ajout de 2 gem (will_paginate & will_paginate-bootstrap), modification de l'index dans le controller et la vue
  - Traduction de la librairie de pagination (config/initializers/locale.rb  + config/initializers/locales/fr)
+
+ - Génération des fichiers pour les combats de pokémons
+ ```sh
+ $ bundle exec rails generate scaffold Move name:string description:string type:references --skip --skip-test-framework --skip-assets
+ $ bundle exec rails db:migrate
+ ```
