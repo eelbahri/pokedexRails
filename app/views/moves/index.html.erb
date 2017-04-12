@@ -2,7 +2,7 @@
 
 <h1>Moves</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,9 +18,9 @@
         <td><%= move.name %></td>
         <td><%= move.description %></td>
         <td><%= move.type %></td>
-        <td><%= link_to 'Show', move %></td>
-        <td><%= link_to 'Edit', edit_move_path(move) %></td>
-        <td><%= link_to 'Destroy', move, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', move, class: 'btn btn-info' %></td>
+        <td><%= link_to 'Edit', edit_move_path(move), class: 'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', move, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,6 @@
 
 <br>
 
-<%= link_to 'New Move', new_move_path %>
+<%= link_to 'Add an Attack', new_move_path, class: 'btn btn-primary' %>
+<%= link_to 'Pokemons', pokemons_path, class: 'btn btn-success' %>
+<%= link_to 'Types', types_path, class: 'btn btn-success' %>

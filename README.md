@@ -11,6 +11,7 @@
  - CRUD complet
  - link_to
 
+
 ### 22 mars 2017
 
  - Migration sur un modèle existant
@@ -24,6 +25,7 @@
   $ rails generate scaffold Type name:string color:string --skip --skip-test-framework --skip-assets
   $ bundle exec rails db:migrate
   ```
+
 ### 11 avril 2017
 
  - Mise en place du style pour toutes les vues "types"
@@ -65,3 +67,13 @@
  $ bundle exec rails generate scaffold Move name:string description:string type:references --skip --skip-test-framework --skip-assets
  $ bundle exec rails db:migrate
  ```
+
+### 12 avril 2017
+
+ - Mise en style des vues "moves"
+ - Création d'un modèle pour relier les attaques aux pokemons :
+ ```sh
+ $ bundle exec rails g model PokemonMove pokemon:references move:references --skip-test-framework
+ $ bundle exec rails db:migrate
+ ```
+ - Edition des modèles Move et Pokemon pour les lier au nouveau modèle PokemonMove
