@@ -77,3 +77,11 @@
  $ bundle exec rails db:migrate
  ```
  - Edition des modèles Move et Pokemon pour les lier au nouveau modèle PokemonMove
+ - Test pour vérifier le bon fonctionnement : (```$ bundle exec rails console --sandbox```)
+ ```sh
+ t = Type.create name: 'Electrique', color: '#FFF168'
+ m = Move.create name: 'Eclair', type: t
+ p = Pokemon.create name: 'Pikachu', type: t, moves: [m]
+ Pokemon.last.moves.last.type.color
+ ```
+ Le résultat doit renvoyer le couleur de l'attaque, ici : #FFF168
