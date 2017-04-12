@@ -11,8 +11,12 @@
     <% if type.nil? %>
     aucun
     <% else %>
-        <%= type_badge(type.name, type.color) %>
+        <%= type_badge(type) %>
     <% end %>
+</p>
+
+<p>
+    Attaques : <%= render partial: 'moves_list', locals: { moves: @pokemon.moves } %>
 </p>
 
 <p>

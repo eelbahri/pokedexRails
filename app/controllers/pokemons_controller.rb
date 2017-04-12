@@ -47,6 +47,13 @@ class PokemonsController < ApplicationController
     end
 
     def pokemon_params
-        params.require(:pokemon).permit(:name, :number, :level, :health_points, :type_id)
+        params.require(:pokemon).permit(
+            :name,
+            :number,
+            :level,
+            :health_points,
+            :type_id,
+            move_ids: [] # Permet d'avoir le tableau des attaques 
+        )
     end
 end

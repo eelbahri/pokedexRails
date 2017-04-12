@@ -85,3 +85,6 @@
  Pokemon.last.moves.last.type.color
  ```
  Le résultat doit renvoyer le couleur de l'attaque, ici : #FFF168
+ - Ajout des attaques dans le formulaire Pokemon et son affichage dans les vues
+ - Factorisation : Création d'un partial pour l'affichage des attaques :_ _moves_list.html.erb_
+ - Modification de l'helper types_helper

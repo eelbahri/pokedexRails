@@ -17,7 +17,7 @@
       <tr>
         <td><%= move.name %></td>
         <td><%= move.description %></td>
-        <td><%= move.type %></td>
+        <td><%= move.type.name %></td>
         <td><%= link_to 'Show', move, class: 'btn btn-info' %></td>
         <td><%= link_to 'Edit', edit_move_path(move), class: 'btn btn-warning' %></td>
         <td><%= link_to 'Destroy', move, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>

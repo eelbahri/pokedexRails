@@ -1,0 +1,9 @@
+<% if moves.any?%>
+    <%= raw moves.map { |element| link_to(element.name, element) }
+             .join(', ')
+             # m revient à écrire : move_path(m.id), rails prend direct l'id de l'objet
+             # la méthode map fait une itération sur chaque élément qu'on lui donne et renvoie ce qu'on lui demande (ici le tableau est moves, donc les attaques, et nous demandons les names)
+    %>
+<% else %>
+    &empty;
+<% end %>

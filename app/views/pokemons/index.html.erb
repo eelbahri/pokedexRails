@@ -13,6 +13,8 @@
                 <td>Level</td>
                 <td>Health Points</td>
                 <td>Type</td>
+                <td>Attacks</td>
+                <td>Actions</td>
             </tr>
         </thead>
         <tbody>
@@ -23,7 +25,8 @@
                 <td><%= pokemon.number %></td>
                 <td><%= pokemon.level %></td>
                 <td><%= pokemon.health_points %> hp</td>
-                <td><%= pokemon.type ? type_badge(pokemon.type.name, pokemon.type.color) : '&empty;'.html_safe %></td>
+                <td><%= pokemon.type ? type_badge(pokemon.type) : '&empty;'.html_safe %></td>
+                <td><%= render partial: 'moves_list', locals: { moves: pokemon.moves } %></td>
                 <td><%= link_to 'Show', pokemon_path(pokemon.id), class: 'btn btn-info' %>
                     <%= link_to 'Edit', edit_pokemon_path(pokemon), class: 'btn btn-warning' %>
                     <%= link_to 'Delete', pokemon,
