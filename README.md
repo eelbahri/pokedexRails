@@ -92,4 +92,18 @@
 ### 6 juin 2017
 
  - Les flash notices (voir pokemon/update + layout html pour l'affichage)
- 
+ - DEVISE : gem solution d'authentification
+ gemfile
+ ```sh
+ gem 'devise'
+ gem 'devise-i18n'
+ ```
+
+ command : (ne pas oublier de redemarrer le serveur)
+ ```sh
+ $ bundle install
+ $ bundle exec rails generate devise:install
+ $ bundle exec rails generate devise User
+ $ bundle exec rails db:migrate
+ $ bundle exec rails generate devise:i18n:views
+ ```

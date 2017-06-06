@@ -15,13 +15,22 @@
       <div class="container">
           <br>
           <% flash.each do |name, msg| %>
-            <div class="alert alert-<%= name %>">
+            <div class="alert alert-<%= flash_color(name) %>">
                 <a class="close" data-dismiss="alert">x</a>
                 <%= content_tag :div, msg, id:"flash_#{name}" %>
             </div>
           <% end %>
 
           <br>
+
+          <% if user_signed_in? %>
+            Connecté en tant que <%= current_user.email %> -
+            <%= link_to 'Se deconnecter',
+                destroy_user_session_path,
+                method: :delete %>
+          <% else %>
+            <%= link_to 'Se connecter', new_user_session_path %>
+          <% end %>
 
           <%= yield %>
       </div>
