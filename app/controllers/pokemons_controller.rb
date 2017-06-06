@@ -1,5 +1,6 @@
 class PokemonsController < ApplicationController
     before_action :set_pokemon, only: [:show, :edit, :update, :destroy] # boje
+    before_action :authenticate_user!, only: [:new, :create, :edit]
 
     def index # Le @ envoie la variable à la vue
         # pour plus de performances
