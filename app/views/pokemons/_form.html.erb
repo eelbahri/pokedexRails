@@ -42,7 +42,9 @@
     <div class="row">
         <div class="form-group col-lg-5">
             <p>
-                <%= f.association :moves, label: 'Attack', class: 'form-control' %>
+                <%= f.association :moves, label: 'Attack',
+                                          as: :check_boxes,
+                                          class: 'form-control' %>
             </p>
         </div>
     </div>

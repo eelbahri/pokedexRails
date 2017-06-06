@@ -29,6 +29,7 @@ class PokemonsController < ApplicationController
 
     def update
         if @pokemon.update pokemon_params
+            flash[:success] = "Le pokemon #{@pokemon.name} a bien été modifié."
             redirect_to @pokemon
         else
             render 'edit'
@@ -53,7 +54,7 @@ class PokemonsController < ApplicationController
             :level,
             :health_points,
             :type_id,
-            move_ids: [] # Permet d'avoir le tableau des attaques 
+            move_ids: [] # Permet d'avoir le tableau des attaques
         )
     end
 end

@@ -13,6 +13,16 @@
 
   <body>
       <div class="container">
+          <br>
+          <% flash.each do |name, msg| %>
+            <div class="alert alert-<%= name %>">
+                <a class="close" data-dismiss="alert">x</a>
+                <%= content_tag :div, msg, id:"flash_#{name}" %>
+            </div>
+          <% end %>
+
+          <br>
+
           <%= yield %>
       </div>
   </body>

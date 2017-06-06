@@ -87,4 +87,9 @@
  Le résultat doit renvoyer le couleur de l'attaque, ici : #FFF168
  - Ajout des attaques dans le formulaire Pokemon et son affichage dans les vues
  - Factorisation : Création d'un partial pour l'affichage des attaques :_ _moves_list.html.erb_
- - Modification de l'helper types_helper
+ - Modification de l'helper types_helper : Amélioration et ajout du lien vers le badge du type correspondant
+
+### 6 juin 2017
+
+ - Les flash notices (voir pokemon/update + layout html pour l'affichage)
+ 
