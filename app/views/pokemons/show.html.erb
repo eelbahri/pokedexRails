@@ -1,5 +1,11 @@
 <h1>Pokemon</h1>
 
+<% if @pokemon.avatar.exists? %>
+    <div style="text-align: center;">
+        <%= image_tag @pokemon.avatar.url(:medium) %>
+    </div>
+<% end %>
+
 <p>Name : <%= @pokemon.name %></p>
 <p>Number : <%= @pokemon.number %></p>
 <p>Level : <%= @pokemon.level %></p>

@@ -107,3 +107,34 @@
  $ bundle exec rails db:migrate
  $ bundle exec rails generate devise:i18n:views
  ```
+
+### 7 juin 2017
+
+ - Paperclip : upload d'images
+ ```sh
+ gem 'Paperclip'
+ ```
+ command :
+ ```sh
+ $ bundle install
+ $ bundle exec rails g paperclip pokemon avatar
+ $ bundle exec rails db:migrate
+ ```
+ - Validations
+ ```sh
+ $ bundle exec rails g migration add_username_to_users username:string:uniq
+ $ bundle exec rails db:migrate
+ ```
+ - Rôles et permissions : Rolify & cancancan
+ gemfile :
+ ```sh
+ gem 'cancancan'
+ gem 'rolify'
+ ```
+ command :
+ ```sh
+ $ bundle install
+ $ bundle exec rails g cancan:ability
+ $ bundle exec rails g rolify Role User
+ $ bundle exec rails db:migrate
+ ```

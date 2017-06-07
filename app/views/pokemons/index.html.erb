@@ -7,6 +7,7 @@
     <table class="table">
         <thead>
             <tr>
+                <td>Avatar</td>
                 <td>Id</td>
                 <td>Name</td>
                 <td>Number</td>
@@ -20,6 +21,9 @@
         <tbody>
             <% @pokemons.each do |pokemon| %>
             <tr>
+                <td>
+                    <%= pokemon.avatar.exists? ? image_tag(pokemon.avatar.url(:thumb)): '&empty;'.html_safe %>
+               </td>
                 <td><%= pokemon.id %></td>
                 <td><%= pokemon.name %></td>
                 <td><%= pokemon.number %></td>

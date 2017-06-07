@@ -24,7 +24,7 @@
           <br>
 
           <% if user_signed_in? %>
-            Connecté en tant que <%= current_user.email %> -
+            Connecté en tant que <%= link_to current_user.username, edit_user_registration_path %> -
             <%= link_to 'Se deconnecter',
                 destroy_user_session_path,
                 method: :delete %>

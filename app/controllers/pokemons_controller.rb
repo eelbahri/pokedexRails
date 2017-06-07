@@ -55,6 +55,7 @@ class PokemonsController < ApplicationController
             :level,
             :health_points,
             :type_id,
+            :avatar,
             move_ids: [] # Permet d'avoir le tableau des attaques
         )
     end

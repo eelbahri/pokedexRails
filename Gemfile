@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'cancancan'
+gem 'rolify'
+gem 'paperclip'
 gem 'devise'
 gem 'devise-i18n'
 gem 'will_paginate'
